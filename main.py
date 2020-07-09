@@ -202,5 +202,3 @@ create_file(preds , 'NeuralNetwork')
 
 create_file(pred_by_vote , 'Pred_by_vote')
 create_file(pred_by_prob , 'Pred_by_prob')
-
-
