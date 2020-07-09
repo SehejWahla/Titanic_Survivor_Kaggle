@@ -54,7 +54,7 @@ def Probability_learning(ml , train_np , labels , test_np):
     for model in ml[:-1]:
         Predictions_matrix.append( model.predict_proba(test_np) )
         
-    nn_preds = (ml[-1].predict(test_np) > 0.5).astype(int).squeeze()
+    nn_preds = (ml[-1].predict(test_np)).squeeze()
 
     Predictions_matrix = np.array(Predictions_matrix) 
     Predictions = np.sum( Predictions_matrix , axis = 0 ) /  ( len(ml) - 1 )
